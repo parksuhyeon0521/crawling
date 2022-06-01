@@ -1,3 +1,22 @@
+#student_1
+import requests
+from bs4 import BeautifulSoup
+
+url= "https://www.musinsa.com/ranking/keyword"
+res = requests.get(url)
+res.raise_for_status() 
+
+soup = BeautifulSoup(res.text, "lxml")
+items = soup.find_all("p", attrs = {"class":"p_srank"})
+
+for item in items:
+  p_srank = item.get_text()
+  print(p_srank)
+
+
+
+
+#student_2
 import requests 
 from bs4 import BeautifulSoup
 
