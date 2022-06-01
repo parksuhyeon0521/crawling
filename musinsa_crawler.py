@@ -15,7 +15,6 @@ for item in items:
 
 
 
-
 #student_2
 import requests 
 from bs4 import BeautifulSoup
