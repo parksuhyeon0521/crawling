@@ -1,15 +1,3 @@
-
-import requests
-from bs4 import BeautifulSoup
-
-url= "https://www.musinsa.com/ranking/keyword"
-res = requests.get(url)
-res.raise_for_status() 
-
-soup = BeautifulSoup(res.text, "lxml")
-items = soup.find_all("p", attrs = {"class":"p_srank"})
-
-
 001. 반팔
 002. 반바지
 003. 반팔티
